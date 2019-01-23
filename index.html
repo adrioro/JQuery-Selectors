@@ -14,11 +14,32 @@
 
 
         <div id="elementID" class="bold">This is a box</div>
+        <span name="testName">Span 1</span>
+        <span name="testName">Span 2</span>
 
         <script>
+            //SELECTING ELEMENTS IN MANY WAYS:
+
             var MyId = $("#elementID"); //Selecting by ID.
-            var allBolds = $(.bold); //Selecting by class.
+            var allBolds = $(".bold"); //Selecting by class.
             var myDiv = $("div"); //Selecting by element.
+
+            var allNames = $('[name="testName"]'); //Select by attribute.
+            //or
+            var allNames = $('span[name="testName"]');
+
+            //IMPORTANT:
+            /* If selectors do not work, we might need to put the code inside
+            the ready() method.
+
+            $(window).ready(function() {
+            We tell the browswe to not load this until jQuery is finished loading.
+            var getBoldClass = $(".bold"); //Then here is our code.
+          }
+          )
+
+
+            */
 
         </script>
 
